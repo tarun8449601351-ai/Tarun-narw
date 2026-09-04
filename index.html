@@ -1,222 +1,228 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AKASH ARMY 💫</title>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)n=f.fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','918017710555281');
-fbq('track','PageView');
-</script>
-
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-html,body{
-width:100%;
-height:100%;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-background:#f4f4f4;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:15px;
+background:#000;
 }
 
-.container{
+.wrapper{
 width:100%;
-max-width:600px;
-min-height:95vh;
-background:#fff;
-border-radius:30px;
-padding:45px 30px;
+display:flex;
+justify-content:center;
+padding:20px;
+}
+
+.glow{
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,rgba(255,215,0,.25),transparent 70%);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+z-index:-1;
+}
+
+.card{
+width:100%;
+max-width:430px;
+background:#050505;
+border-radius:35px;
+padding:30px 20px;
 text-align:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-box-shadow:0 15px 40px rgba(0,0,0,.18);
+margin:auto;
+box-shadow:0 0 20px rgba(255,215,0,.25),0 0 50px rgba(255,215,0,.15);
+border:1px solid rgba(255,215,0,.2);
 }
 
-.dp{
-width:200px;
-height:200px;
+.profile{
+width:180px;
+height:180px;
+margin:auto;
+padding:5px;
 border-radius:50%;
-object-fit:cover;
-border:6px solid #ddd;
+background:linear-gradient(45deg,#ffd700,#fff0a0);
+box-shadow:0 0 25px #ffd700,0 0 60px rgba(255,215,0,.6);
 }
 
-h1{
-margin-top:25px;
-font-size:42px;
-font-weight:700;
-color:#111;
-}
-
-.sub{
-margin-top:15px;
-font-size:23px;
-color:#666;
-}
-
-.join{
-display:block;
+.profile img{
 width:100%;
-max-width:420px;
-margin-top:35px;
-padding:22px;
-background:#0088cc;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+}
+
+.title{
+margin-top:25px;
+font-size:48px;
+font-weight:900;
 color:#fff;
+line-height:1.1;
+}
+
+.subtitle{
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+color:#ffd700;
+}
+
+.join-btn{
+display:block;
+margin-top:35px;
+padding:20px;
+border-radius:50px;
 text-decoration:none;
-font-size:26px;
-font-weight:bold;
-border-radius:60px;
+font-size:22px;
+font-weight:800;
+color:#000;
+background:linear-gradient(to right,#d4af37,#fff2a8);
+box-shadow:0 0 20px rgba(255,215,0,.7);
 transition:.3s;
 }
 
-.join:hover{
-background:#0077b5;
-transform:scale(1.03);
+.join-btn:hover{
+transform:scale(1.05);
 }
 
-.members{
-margin-top:28px;
-font-size:21px;
+.info{
+margin-top:25px;
+color:#ffd700;
+font-size:18px;
 font-weight:bold;
-color:#16a34a;
-animation:blink .8s infinite;
 }
 
-@keyframes blink{
-50%{
-opacity:.4;
-}
-}
-
-.timer{
-margin-top:30px;
-}
-
-.timer span{
-font-size:48px;
-font-weight:bold;
-color:#d60045;
-}
-
-.timer p{
-font-size:17px;
-margin-top:6px;
-color:#555;
+.footer{
+margin-top:20px;
+font-size:15px;
+color:#777;
 }
 
 @media(max-width:480px){
-
-.container{
-padding:35px 20px;
-min-height:100vh;
-border-radius:0;
+.title{
+font-size:38px;
 }
 
-.dp{
-width:180px;
-height:180px;
+.profile{
+width:160px;
+height:160px;
 }
 
-h1{
-font-size:36px;
-}
-
-.sub{
+.join-btn{
 font-size:20px;
-}
-
-.join{
-font-size:22px;
 padding:18px;
 }
-
-.members{
-font-size:18px;
-}
-
-.timer span{
-font-size:42px;
-}
-
 }
 </style>
 
-</head>
+<div class="wrapper">
 
-<body>
+<div class="glow"></div>
 
-<div class="container">
+<div class="card">
 
-<img class="dp" src="https://d1yei2z3i6k35z.cloudfront.net/18362304/6a53479ff39b01.28859413_5576.jpg">
+<div class="profile">
+<img src="https://d1yei2z3i6k35z.cloudfront.net/18362304/6a53479ff39b01.28859413_5576.jpg">
+</div>
 
-<h1>AKASH ARMY 💫</h1>
+<h1 class="title">AKASH ARMY 🔥</h1>
 
-<p class="sub">VIP PANEL JOIN KARO FAST 🚀</p>
+<p class="subtitle">
+Join the official Telegram channel for updates.
+</p>
 
-<a class="join" href="https://t.me/+uRxBD5fL7hphNTM1">
-🚀 JOIN TELEGRAM
+<a href="https://t.me/+6kRZO-8UobYyYzll" class="join-btn">
+🚀 JOIN TELEGRAM NOW 🚀
 </a>
 
-<div class="members">
-🔥 999+ Members Joining Already
+<div class="info">
+⭐ Active Telegram Community
 </div>
 
-<div class="timer">
-<span id="s">01</span>
-<p>SECONDS</p>
+<div class="footer">
+100% FREE | NO SPAM | INSTANT UPDATES
 </div>
 
+</div>
+
+</div>
+<div style="text-align:center;padding:40px;font-family:Arial,sans-serif;">
+    <h2>Joining Telegram...</h2>
+    <p>Please wait <span id="count">2</span> seconds</p>
 </div>
 
 <script>
-let sec=1;
+let time = 50;
 
-document.getElementById("s").innerHTML=("0"+sec).slice(-2);
+const timer = setInterval(function () {
+    time--;
+    document.getElementById("count").innerText = time;
 
-let t=setInterval(function(){
-
-sec--;
-
-document.getElementById("s").innerHTML=("0"+Math.max(sec,0)).slice(-2);
-
-if(sec<=0){
-
-clearInterval(t);
-
-if(typeof fbq!=="undefined"){
-fbq("track","Lead");
-}
-
-window.location.href="https://t.me/+uRxBD5fL7hphNTM1";
-
-}
-
-},1000);
+    if (time <= 0) {
+        clearInterval(timer);
+        window.location.href = "https://t.me/+6kRZO-8UobYyYzll";
+    }
+}, 1000);
 </script>
+<div class="members-joined">
+    <span class="dot"></span>
+    <span class="text">999+ Members Joining Already</span>
+</div>
 
-</body>
-</html>
+<style>
+.members-joined{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top:15px;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    animation:fadeUp 2s infinite;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    background:#00ff66;
+    border-radius:50%;
+    box-shadow:0 0 10px #00ff66;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+    50%{
+        transform:scale(1.5);
+        opacity:.6;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fadeUp{
+    0%{
+        transform:translateY(5px);
+        opacity:.7;
+    }
+    50%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(5px);
+        opacity:.7;
+    }
+}
+</style>
