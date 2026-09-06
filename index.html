@@ -2,268 +2,228 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0,
-      maximum-scale=1.0, user-scalable=no">
+               maximum-scale=1.0, user-scalable=no">
 
-<title>AKASH ARMY</title>
+<title>SOUVIK REAL VIP</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
 }
 
 html,body{
     width:100%;
     min-height:100%;
-    background:#000;
 }
 
 body{
-    overflow-x:hidden;
+    background:#05070a;
     color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
 }
-
-/* ===== BACKGROUND ===== */
 
 body::before{
     content:"";
     position:fixed;
-    width:420px;
-    height:420px;
+    inset:0;
+    pointer-events:none;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,184,25,.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(255,174,0,.05),
+            transparent 30%
+        );
+}
+
+.page{
+    position:relative;
+    width:100%;
+    max-width:560px;
+    min-height:100vh;
+    margin:auto;
+    padding:24px 18px 30px;
+}
+
+.page::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
     left:50%;
-    top:48%;
-    transform:translate(-50%,-50%);
-    background:radial-gradient(
-        circle,
-        rgba(255,215,0,.18) 0%,
-        rgba(255,215,0,.07) 35%,
-        transparent 72%
-    );
-    filter:blur(20px);
+    top:25%;
+    transform:translateX(-50%);
+    border:1px solid rgba(255,193,7,.025);
+    border-radius:50%;
     pointer-events:none;
 }
 
-/* ===== PHONE DISPLAY AREA ===== */
+/* TOP BADGE */
 
-.phone-screen{
-    width:100%;
-    min-height:100vh;
+.top-badge{
+    width:max-content;
+    margin:0 auto 24px;
+    padding:8px 18px;
 
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-
-    padding:28px 14px 35px;
-
-    position:relative;
-}
-
-/* ===== MAIN CARD ===== */
-
-.card{
-    width:100%;
-    max-width:390px;
-
-    margin-top:5px;
-
-    padding:28px 18px 25px;
-
-    text-align:center;
+    border:1px solid rgba(255,191,31,.35);
+    border-radius:30px;
 
     background:
         linear-gradient(
-            145deg,
-            rgba(255,255,255,.045),
-            rgba(255,255,255,.008)
+            180deg,
+            rgba(255,191,31,.10),
+            rgba(255,191,31,.025)
         );
 
-    border:1px solid rgba(255,215,0,.25);
-
-    border-radius:32px;
+    color:#e9b72c;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:3px;
 
     box-shadow:
-        0 0 15px rgba(255,215,0,.12),
-        0 0 45px rgba(255,215,0,.08),
-        inset 0 1px 0 rgba(255,255,255,.08);
-
-    backdrop-filter:blur(15px);
+        0 0 20px rgba(255,184,0,.08),
+        inset 0 0 15px rgba(255,184,0,.04);
 }
 
-/* ===== PROFILE ===== */
+/* LOGO */
 
-.profile{
-    width:150px;
-    height:150px;
+.logo-area{
+    position:relative;
+    width:180px;
+    height:180px;
+    margin:0 auto 30px;
 
-    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
-    padding:4px;
+.logo-ring{
+    position:absolute;
+    width:170px;
+    height:170px;
 
     border-radius:50%;
 
     background:
-        linear-gradient(
-            135deg,
-            #fff4a8,
-            #ffd700,
-            #b8860b,
-            #fff1a1
+        repeating-conic-gradient(
+            from 0deg,
+            #ffbf24 0deg 3deg,
+            transparent 3deg 10deg
         );
 
-    box-shadow:
-        0 0 18px rgba(255,215,0,.8),
-        0 0 45px rgba(255,215,0,.35);
+    -webkit-mask:
+        radial-gradient(
+            farthest-side,
+            transparent calc(100% - 5px),
+            #000 calc(100% - 4px)
+        );
+
+    mask:
+        radial-gradient(
+            farthest-side,
+            transparent calc(100% - 5px),
+            #000 calc(100% - 4px)
+        );
+
+    animation:rotateRing 5s linear infinite;
+
+    filter:
+        drop-shadow(0 0 6px rgba(255,185,0,.8))
+        drop-shadow(0 0 15px rgba(255,185,0,.3));
 }
 
-.profile img{
-    width:100%;
-    height:100%;
+@keyframes rotateRing{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.logo-ring::after{
+    content:"";
+    position:absolute;
+    inset:9px;
+    border-radius:50%;
+    border:1px solid rgba(255,191,31,.55);
+}
+
+.logo{
+    position:relative;
+    z-index:3;
+
+    width:135px;
+    height:135px;
 
     object-fit:cover;
-
     border-radius:50%;
 
-    display:block;
+    border:3px solid #d99b16;
 
-    border:3px solid #080808;
+    box-shadow:
+        0 0 0 5px rgba(255,188,24,.08),
+        0 0 25px rgba(255,181,0,.38),
+        0 0 60px rgba(255,181,0,.15);
+
+    background:#111;
 }
 
-/* ===== TITLE ===== */
+/* STATUS */
 
-.title{
-    margin-top:22px;
+.status{
+    width:max-content;
+    margin:0 auto 22px;
 
-    font-size:36px;
-    line-height:1.05;
+    display:flex;
+    align-items:center;
+    gap:9px;
 
-    font-weight:900;
+    padding:10px 18px;
 
-    letter-spacing:-1px;
-
-    color:#fff;
-
-    text-shadow:
-        0 0 12px rgba(255,255,255,.15);
-}
-
-/* ===== SUBTITLE ===== */
-
-.subtitle{
-    margin-top:14px;
-
-    font-size:15px;
-    line-height:1.5;
-
-    color:#d6d6d6;
-}
-
-/* ===== BUTTON ===== */
-
-.join-btn{
-    display:block;
-
-    margin:25px auto 0;
-
-    width:100%;
-
-    padding:17px 12px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    font-size:17px;
-    font-weight:900;
-
-    color:#080808;
+    border-radius:30px;
 
     background:
         linear-gradient(
-            110deg,
-            #c89b20,
-            #fff1a3,
-            #ffd700,
-            #fff3ad
+            180deg,
+            rgba(0,255,153,.12),
+            rgba(0,255,153,.035)
         );
 
-    box-shadow:
-        0 0 15px rgba(255,215,0,.5),
-        0 7px 25px rgba(255,215,0,.16);
+    border:1px solid rgba(0,255,153,.22);
 
-    transition:.25s ease;
+    color:#45dba0;
 
-    position:relative;
-    overflow:hidden;
-}
-
-.join-btn::before{
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:-100%;
-
-    width:70%;
-    height:100%;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.7),
-        transparent
-    );
-
-    transform:skewX(-20deg);
-
-    animation:shine 2.8s infinite;
-}
-
-@keyframes shine{
-    0%{
-        left:-100%;
-    }
-
-    55%,100%{
-        left:130%;
-    }
-}
-
-.join-btn:active{
-    transform:scale(.97);
-}
-
-/* ===== ACTIVE COMMUNITY ===== */
-
-.info{
-    margin-top:22px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:7px;
-
-    color:#ffd700;
-
-    font-size:14px;
+    font-size:10px;
+    letter-spacing:2px;
     font-weight:700;
 }
 
-.info-dot{
+.status-dot{
     width:8px;
     height:8px;
-
-    background:#00ff66;
-
     border-radius:50%;
 
-    box-shadow:0 0 12px #00ff66;
+    background:#00ff9d;
 
-    animation:pulse 1.4s infinite;
+    box-shadow:
+        0 0 7px #00ff9d,
+        0 0 15px rgba(0,255,157,.7);
+
+    animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
@@ -273,239 +233,698 @@ body::before{
     }
 
     50%{
-        transform:scale(1.5);
+        transform:scale(.65);
         opacity:.55;
     }
 }
 
-/* ===== FOOTER ===== */
+/* TITLE */
 
-.footer{
+.title{
+    text-align:center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:clamp(38px,9vw,58px);
+    line-height:1;
+
+    letter-spacing:1px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 10%,
+            #dedede 48%,
+            #9b9b9b 100%
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    white-space:nowrap;
+}
+
+.subtitle{
+    text-align:center;
     margin-top:15px;
 
-    font-size:11px;
+    font-size:10px;
+    font-weight:700;
 
-    letter-spacing:.4px;
+    letter-spacing:6px;
 
-    color:#777;
+    color:#dba72c;
+
+    text-shadow:
+        0 0 15px rgba(255,184,0,.25);
 }
 
-/* ===== TIMER ===== */
+/* DIVIDER */
 
-.timer-box{
-    margin-top:20px;
+.divider{
+    position:relative;
+    width:230px;
+    height:18px;
 
-    padding-top:17px;
-
-    border-top:1px solid rgba(255,215,0,.12);
-
-    color:#777;
-
-    font-size:11px;
-}
-
-#count{
-    color:#ffd700;
-    font-weight:bold;
-}
-
-/* ===== MEMBERS ===== */
-
-.members-joined{
-    margin-top:18px;
+    margin:19px auto 20px;
 
     display:flex;
-    justify-content:center;
     align-items:center;
-
-    gap:8px;
-
-    font-size:12px;
-    font-weight:600;
-
-    color:#ddd;
+    justify-content:center;
 }
 
-.dot{
-    width:8px;
-    height:8px;
+.divider::before{
+    content:"";
+    width:100%;
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #a67518,
+            #e8b52c,
+            #a67518,
+            transparent
+        );
+}
+
+.diamond{
+    position:absolute;
+    width:9px;
+    height:9px;
+
+    background:#e9b52b;
+
+    transform:rotate(45deg);
+
+    box-shadow:
+        0 0 10px rgba(255,187,0,.5);
+}
+
+/* DESCRIPTION */
+
+.description{
+    max-width:420px;
+    margin:0 auto 27px;
+
+    text-align:center;
+
+    color:#92959c;
+
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* CTA BUTTON */
+
+.cta{
+    display:block;
+
+    width:100%;
+    padding:20px 15px;
+
+    border-radius:17px;
+
+    text-align:center;
+    text-decoration:none;
+
+    color:#080808;
+
+    font-size:16px;
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffca28 0%,
+            #f3a900 48%,
+            #ffbd18 100%
+        );
+
+    box-shadow:
+        0 12px 35px rgba(255,176,0,.20),
+        inset 0 1px rgba(255,255,255,.5);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.cta:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 17px 40px rgba(255,176,0,.30),
+        inset 0 1px rgba(255,255,255,.5);
+}
+
+.cta:active{
+    transform:scale(.98);
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:7px;
+
+    margin-top:15px;
+}
+
+.feature{
+    min-height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:7px 4px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    color:#aaa;
+
+    font-size:9px;
+    line-height:1.2;
+}
+
+.feature span{
+    color:#dca927;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+
+    margin-top:22px;
+}
+
+.stat{
+    min-height:105px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.035),
+        0 8px 30px rgba(0,0,0,.20);
+}
+
+.stat-number{
+    color:#e8ad25;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:31px;
+    font-weight:700;
+
+    text-shadow:
+        0 0 15px rgba(255,185,0,.20);
+
+    text-align:center;
+}
+
+.stat-label{
+    margin-top:7px;
+
+    color:#73767d;
+
+    font-size:8px;
+    letter-spacing:4px;
+}
+
+/* COUNTDOWN */
+
+.count-title{
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#686b72;
+
+    font-size:9px;
+    letter-spacing:5px;
+}
+
+.countdown{
+    position:relative;
+
+    width:128px;
+    height:128px;
+
+    margin:13px auto 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     border-radius:50%;
 
-    background:#00ff66;
+    border:6px solid #e8ac20;
 
-    box-shadow:0 0 10px #00ff66;
-
-    animation:pulse 1.2s infinite;
+    box-shadow:
+        0 0 20px rgba(255,177,0,.18),
+        inset 0 0 25px rgba(255,177,0,.05);
 }
 
-/* ===== MOBILE ===== */
+.countdown::before{
+    content:"";
 
-@media(max-width:480px){
+    position:absolute;
+    inset:-8px;
 
-    .phone-screen{
-        padding:
-            18px 12px
-            28px;
+    border-radius:50%;
+
+    border:1px solid rgba(255,189,30,.25);
+}
+
+#seconds{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:36px;
+    color:#eab52a;
+}
+
+.seconds-label{
+    position:absolute;
+    bottom:28px;
+
+    color:#6e7076;
+
+    font-size:7px;
+    letter-spacing:4px;
+}
+
+/* BOTTOM STATUS */
+
+.bottom-status{
+    width:100%;
+
+    padding:12px;
+
+    text-align:center;
+
+    border-radius:10px;
+
+    border:1px solid rgba(0,255,157,.12);
+
+    background:rgba(0,255,157,.035);
+
+    color:#5d8175;
+
+    font-size:9px;
+}
+
+.bottom-status b{
+    color:#00e991;
+}
+
+.footer{
+    margin-top:20px;
+
+    text-align:center;
+
+    color:#3d3f44;
+
+    font-size:8px;
+    letter-spacing:2px;
+}
+
+/* MOBILE */
+
+@media(max-width:380px){
+
+    .page{
+        padding-left:13px;
+        padding-right:13px;
     }
 
-    .card{
-        max-width:100%;
-
-        padding:
-            24px 16px 22px;
-
-        border-radius:28px;
+    .logo-area{
+        width:155px;
+        height:155px;
     }
 
-    .profile{
-        width:145px;
-        height:145px;
+    .logo-ring{
+        width:150px;
+        height:150px;
+    }
+
+    .logo{
+        width:120px;
+        height:120px;
     }
 
     .title{
-        font-size:34px;
+        font-size:35px;
     }
 
     .subtitle{
-        font-size:14px;
+        font-size:8px;
+        letter-spacing:4px;
     }
 
-    .join-btn{
-        font-size:16px;
-        padding:16px 10px;
-    }
-}
-
-/* ===== VERY SMALL PHONES ===== */
-
-@media(max-height:700px){
-
-    .phone-screen{
-        padding-top:12px;
+    .description{
+        font-size:12px;
     }
 
-    .card{
-        padding-top:20px;
-    }
-
-    .profile{
-        width:125px;
-        height:125px;
-    }
-
-    .title{
-        margin-top:16px;
-        font-size:31px;
-    }
-
-    .join-btn{
-        margin-top:20px;
-    }
-
-    .timer-box{
-        margin-top:15px;
+    .feature{
+        font-size:8px;
     }
 }
 
+/* DESKTOP */
+
+@media(min-width:700px){
+
+    body{
+        display:flex;
+        justify-content:center;
+    }
+
+    .page{
+        padding-top:35px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<div class="phone-screen">
+<div class="page">
 
-    <div class="card">
+    <!-- TOP BADGE -->
+    <div class="top-badge">
+        ✦ PREMIUM COMMUNITY ✦
+    </div>
 
-        <!-- PROFILE -->
-        <div class="profile">
-            <img src="https://d1yei2z3i6k35z.cloudfront.net/18362304/6a53479ff39b01.28859413_5576.jpg">
-        </div>
 
-        <!-- TITLE -->
-        <h1 class="title">
-            AKASH ARMY 🔥
-        </h1>
+    <!-- LOGO -->
+    <div class="logo-area">
 
-        <!-- SUBTITLE -->
-        <p class="subtitle">
-            Join the official Telegram channel for updates.
-        </p>
+        <div class="logo-ring"></div>
 
-        <!-- JOIN BUTTON -->
-        <a
-            href="https://t.me/+6kRZO-8UobYyYzll"
-            class="join-btn"
+        <img
+            class="logo"
+            src="https://d1yei2z3i6k35z.cloudfront.net/18362304/6a53479ff39b01.28859413_5576.jpg"
+            alt="AKASH ARMY ✨"
         >
-            🚀 JOIN TELEGRAM NOW 🚀
-        </a>
 
-        <!-- ACTIVE -->
-        <div class="info">
-            <span class="info-dot"></span>
-            ⭐ Active Telegram Community
+    </div>
+
+
+    <!-- STATUS -->
+    <div class="status">
+        <span class="status-dot"></span>
+        LIVE COMMUNITY ACTIVE
+    </div>
+
+
+    <!-- TITLE -->
+    <h1 class="title">
+        SOUVIK REAL VIP
+    </h1>
+
+    <div class="subtitle">
+        PREMIUM TELEGRAM COMMUNITY
+    </div>
+
+
+    <!-- DIVIDER -->
+    <div class="divider">
+        <span class="diamond"></span>
+    </div>
+
+
+    <!-- DESCRIPTION -->
+    <p class="description">
+        Join our Telegram Group for daily updates,
+        useful information and exclusive content.
+    </p>
+
+
+    <!-- TELEGRAM BUTTON -->
+    <a
+        href="https://t.me/+6kRZO-8UobYyYzll"
+        class="cta"
+        id="joinBtn"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        ✈️ JOIN TELEGRAM NOW
+    </a>
+
+
+    <!-- FEATURES -->
+    <div class="features">
+
+        <div class="feature">
+            📢 <span>Daily</span>&nbsp; Updates
         </div>
 
-        <!-- FOOTER -->
-        <div class="footer">
-            100% FREE | NO SPAM | INSTANT UPDATES
+        <div class="feature">
+            📊 <span>Premium</span>&nbsp; Content
         </div>
 
-        <!-- TIMER -->
-        <div class="timer-box">
-            Joining Telegram in
-            <span id="count">2</span>
-            seconds...
+        <div class="feature">
+            🔒 <span>Secure</span>&nbsp; Community
+        </div>
+
+        <div class="feature">
+            ⚡ <span>Instant</span>&nbsp; Updates
         </div>
 
     </div>
 
+
+    <!-- STATS -->
+    <div class="stats">
+
+        <div class="stat">
+            <div class="stat-number">10k+</div>
+            <div class="stat-label">JOINING</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">HELP</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">VIP</div>
+            <div class="stat-label">CONTENT</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">RECOVERY</div>
+            <div class="stat-label">VIP</div>
+        </div>
+
+    </div>
+
+
+    <!-- COUNTDOWN -->
+    <div class="count-title">
+        AUTO REDIRECT IN
+    </div>
+
+    <div class="countdown">
+
+        <span id="seconds">6</span>
+
+        <span class="seconds-label">
+            SECONDS
+        </span>
+
+    </div>
+
+
+    <!-- BOTTOM STATUS -->
+    <div class="bottom-status">
+        <b>●</b>
+        &nbsp; Community Active — Join Now
+    </div>
+
+
+    <div class="footer">
+        PREMIUM COMMUNITY • SOUVIK REAL VIP
+    </div>
+
 </div>
 
-<!-- MEMBERS -->
-<div class="members-joined">
-    <span class="dot"></span>
-    <span>999+ Members Joining Already</span>
-</div>
 
 <script>
 
-let time = 2;
+/* =================================
+   TELEGRAM LINK
+================================= */
+
+const telegramLink =
+    "https://t.me/+6kRZO-8UobYyYzll";
+
+
+/* =================================
+   COUNTDOWN
+================================= */
+
+let time = 6;
+
+const seconds =
+    document.getElementById("seconds");
+
 
 const timer = setInterval(function(){
 
     time--;
 
-    document.getElementById("count").innerText = time;
-
     if(time <= 0){
+
+        time = 0;
+
+        seconds.textContent = time;
 
         clearInterval(timer);
 
-        window.location.href =
-        "https://t.me/+6kRZO-8UobYyYzll";
+        /*
+         * Automatic Telegram redirect
+         */
+        window.location.href = telegramLink;
+
+        return;
     }
+
+    seconds.textContent = time;
 
 },1000);
 
-</script>
-      <!-- Meta Pixel Code -->
-<script>
+
+/* =================================
+   BUTTON
+================================= */
+
+const button =
+    document.getElementById("joinBtn");
+
+
+button.addEventListener("click", function(){
+
+    /*
+     * Telegram link is already in href.
+     * This event only sends a Meta Pixel event.
+     */
+
+    if(typeof fbq === "function"){
+
+        fbq(
+            "trackCustom",
+            "TelegramJoinClick"
+        );
+
+    }
+
+});
+
+
+/* =================================
+   META PIXEL
+================================= */
+
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+
+    s.parentNode.insertBefore(t,s);
+
+}
+(window, document, 'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1540819000665825');
-fbq('track', 'PageView');
+
+
+fbq(
+    'init',
+    '1540819000665825'
+);
+
+fbq(
+    'track','pageView'
+);
+
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1540819000665825&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
+
+<noscript>
+
+    <img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=1540819000665825&ev=PageView&noscript=1"
+    >
+
+</noscript>
+
 
 </body>
 </html>
